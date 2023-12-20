@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <link rel="icon" href="./favicon.PNG">
+    <title>Assignment - Three</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div aria-label="Logo section" class="logo">
+            <img src="wppusher-logo.png" alt="wp pusher logo"/>
+        </div>
+        <nav class="web-header">
+            <ul>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Learn more</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section aria-labelledby="checkout-text">
+            <div class="checkout-form">
+                <form>
+                    <div class="form-section">
+                        <h1 id="checkout-text">Checkout</h1>
+                    </div>
+                    <div class="form-section">
+                        <h4 data-number="1">Your Basic Information</h4>
+                                               
+                            <div class="form-group">
+                                <div class="form-inline">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" name="firstname" placeholder="Jane"/>
+                                </div>
+                                <div class="form-inline">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" name="lastname"  placeholder="Doe"/>
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" name="email"  placeholder="janedoe@example.com"/>
+                            </div>
+                    </div>
+                    <div class="form-section">
+                        <h4 data-number="2">Your Payment Information</h4>
+  
+                        <label for="credit-card">Credit Card</label>
+                        <div class="card">
+                            <input type="text" name="credit-card" placeholder="Card Number"/>
+                            <input type="text" name="exp" placeholder="MM / YY"/>
+                            <input type="text" name="cvc" placeholder="CVC"/>
+                        </div>
+                    
+                    </div>
+                    <div class="btn-wrapper" aria-label="Checkout Button">
+                        <input type="button" value="Buy WP Pusher">
+                    </div>
+                
+                </form>
+                <p class="help">
+                    <strong>Need any help?</strong> Don’t hesitate to contact support! <br>
+                    <img src="powered-by-stripe.svg" alt="powered by stripe">
+                </p>
+                
+                
+
+            </div>
+
+            <article>
+                <h4>Freelancer</h4>
+                <p aria-label="Price" class="price">
+                    <sup>&dollar; </sup>99<sub> / year</sub>
+                </p>
+                <p class="italics">
+                    Automatically renews <br> after 1 year
+                </p>
+                <div class="features" aria-label="Features">
+                    <ul>
+                        <li>Use on 5 client sites</li>
+                        <li>Private repositories</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                <div class="agency-plan">
+                    Need <strong>20</strong> client sites? 
+                    <p>Switch to the <em>Agency  </em>  plan.</p>
+                </div>
+                <aside>
+                    FTP is horrible to deal with.  
+                    <em> WP Pusher</em> solves that issue, 
+                    and the customer support is awesome!
+                    <figure class="kirk-beard">
+                        <img src="bitmap.png" alt="Kirk Beard Picture">
+                        <figcaption>Kirk Beard</figcaption>
+                    </figure>
+                </aside>
+            </article>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2018 WP Pusher IVS  ·  <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+:root {
+    --bg-grey: hsla(216, 33%, 97%, 1);
+    --bg-blue: hsla(204, 84%, 41%, 1);
+    --cl-dark: hsla(211, 35%, 17%, 1);
+    --cl-dark-blue: hsla(211, 49%, 55%, 1);
+    --bd-grey: hsla(213, 10%, 44%, 1);
+    --bd-light: hsla(204, 18%, 90%, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-grey);
+    width: 100vw;
+}
+
+/* header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 40px 0 40px;
+    padding-bottom: 33px;
+    border-bottom:2px solid var(--bd-light);
+    /* border: 1px solid; */
+}
+
+.logo>img {
+    width: 200px;
+    height: 39px;
+    /* margin:2px 0 32px 0; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 40px;
+    line-height: 2em;
+}
+
+nav li>a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--cl-dark);
+    /* font-family: Lato; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01px;
+}
+nav li:not(:last-child):hover {
+    border-bottom: 2px solid var(--bg-blue);
+}
+
+nav li:last-child>a {
+    color: inherit;
+}
+
+nav li:last-child {
+    border: 2px solid var(--bd-grey);
+    border-radius: 6px;
+    padding-inline: 10px;
+    margin: 0;
+}
+nav li:last-child:hover {
+    background-color: var(--bg-blue);
+    color: #fff;
+}
+
+/* main content container */
+main { 
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 0 40px;
+    /* padding-left: 262px;
+    padding-right: 286px;
+    padding-top: 85px; */
+    padding: 85px 286px 0 262px;
+}
+
+section {
+    display: flex;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+    /* width:100%; */
+}
+
+/* checkout form section */
+.checkout-form {
+    flex: 1 1 65%;
+}
+
+.form-section:first-of-type {    
+    padding: 40px 49px 0;
+    border-bottom:1px solid var(--bd-light);
+}
+.form-section {    
+    padding: 30px 49px 41px;
+    border-bottom:1px solid var(--bd-light);
+}
+
+h1 {
+    color: var(--cl-dark);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+    width: fit-content;
+    height: 54px;
+    margin-bottom: 24px;
+}
+
+.form-section>h4 {
+    color:var(--cl-dark);
+    /* font-size: 18px; */
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+    margin-bottom: 15px;
+    width: max-content;
+}
+.form-section>h4:before {
+    content: attr(data-number);
+    color:var(--cl-dark-blue);
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--cl-dark-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.form-group {
+    display: flex;
+    gap:30px;
+    margin-block-end: 15px;
+}
+    
+.form-inline {
+        flex: 1 1 50%;
+}
+
+input {
+    margin-top: 7px;
+    border-radius: 4px;
+    border: none;
+    background: hsla(216, 16%, 94%, 1);
+    height: 36px;
+    padding: 0 13px;
+}
+input[type="email"] {
+    width: 75%;
+    display: block;
+}
+
+.card {
+    display: inline-flex;
+}
+input[name="credit-card"] {
+    width: 65%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+} 
+input[name="exp"], input[name="cvc"] {
+    width: 15%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+input[name="exp"] {  
+    width: 20%;  
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+} 
+input[name="exp"]::placeholder {
+    text-align: right;
+}
+
+.card {
+    margin-top: 7px;
+}
+.card input {
+    margin-top: 0;
+}
+.card input:focus {
+    border: none;
+    outline: none;
+}
+
+input:not(.card input):hover, .card:hover{
+    border: 1px solid var(--bg-blue);
+}
+input:not(.card input):focus {
+    outline: 1px solid var(--bg-blue);
+}                
+input:not(.card input):focus-visible {
+    border: 1px solid var(--bg-blue);
+}
+
+.btn-wrapper {      
+    padding: 32px 49px 24px;
+}
+input[type="button"] {
+    border-radius: 5px;
+    background: #038E7D;
+    width: 100%;
+    height: 52px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    /* font-weight: 700; */
+    letter-spacing: -0.396px;
+    line-height: normal;
+} 
+input[type="button"]:hover {
+    background-color: #05d0b9;
+}
+
+.checkout-form>.help {
+    padding: 0 49px;  
+    color: var(--bd-grey);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.01px;
+    text-align: center;
+    margin-bottom: 46.9px;
+}
+.help>div>strong {
+    color: var(--cl-dark);
+}
+.help>strong:before {
+    content: "?";
+    color:var(--cl-dark-blue);
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--cl-dark-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.help>img {
+ margin-top: 30px;
+ height: 20px;
+ width: 92px;
+ 
+}
+/* -------------------------
+product details section */
+article {    
+    flex: 0 0 35%;
+    background-color: var(--bg-blue);
+    border-radius: 0px 6px 6px 0px;
+    padding: 42px 0 0 45px;
+    color: #fff;
+    /* min-width: 312px; */
+}
+
+.price {
+    font-size: 60px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.015px;
+    margin-top: 10px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.price>sup {
+    font-size: 18px;
+    font-weight: 300;
+    /* vertical-align:top; */
+}
+.price>sub {
+    font-size: 18px;
+    font-weight: 300;
+    vertical-align:baseline;
+}
+
+.italics {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.008px;
+}
+
+.features {
+    margin: 36px 0 38px 0;
+}
+
+.features>ul>li {
+    list-style: none;
+    line-height: 30px;
+}
+
+.features>ul>li::before {
+    content: "✔";
+    color: #B9F5FF;
+    margin-right: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #B9F5FF;;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+}
+
+.agency-plan {
+    line-height: 30px;
+    width: max-content;
+    font-style: normal;
+    /* font-weight: 700; */
+    letter-spacing: -0.008px;
+    border-bottom: 4px solid hsla(189, 100%, 86%, 0.5);
+    margin-bottom: 41px;
+   
+}
+.agency-plan>p { 
+    font-weight: bold;
+    margin-bottom: -9px;
+}
+
+aside {
+    padding-top: 41px;
+    margin-right: 40px;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: -0.009px;
+    max-width: 227px;    
+}
+
+figure {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 17px;
+    font-style: normal;
+}
+.kirk-beard img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 33px 0 139px 0;
+    /* width: 100vw; */
+}
+footer>p {
+    color: hsla(200, 6%, 41%, 1);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+footer>p>a {
+    color: hsla(200, 49%, 38%, 1);
+    text-decoration: none;
+}
+
+
+
+
+/* mobile view */
+@media only screen and  (max-width: 768px) {
+    main {        
+        padding: 85px 0 0 0;
+    }
+    /* convert the header menus to a hamburger that shows on mouseover */
+    nav li:last-child {
+        border: unset;
+        border-radius: unset;
+        padding-inline: 5px;
+        margin: unset;
+    }
+    nav li:last-child:hover {
+        background-color: unset;
+    }
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        z-index: 1;
+        opacity: 0;
+    }
+    nav>ul:hover {
+        opacity: 1;
+        background-color: var(--cl-dark);
+    }
+    nav::before {
+        content: "☰";
+        font-size: 2em;
+        cursor: pointer;
+    }
+    nav>ul>li {
+        margin: unset;
+        padding: 0 5px;
+        color: #fff;
+    }
+
+    nav>ul>li>a {
+        color: #fff;
+    }
+/*----------------*/
+    section {
+        flex-direction: column-reverse;
+    }
+
+    .form-inline {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article {    
+        padding: 42px 45px;
+    }
+
+    aside {
+        max-width: unset;
+    }
+
+   
+}
+
+@media only screen and  (max-width: 600px) {
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .card input {
+        width: 25%;
+    }
+    .card input[name="credit-card"] {
+        width: 50%;
+    }
+    .card input::placeholder {
+        font-size: 0.9em;
+    }
+
+}
+
+@media only screen and  (max-width: 470px) {
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap:10px
+    }
+    .card input {
+        width: 30%;
+    }
+    .card input[name="credit-card"] {
+        width: 100%;
+    } 
+    .card input::placeholder {
+        font-size: 12px;
+        text-align: start;
+    }
+    
+    .card:hover{
+        border: none;
+    }
+    .card input:hover {
+        border: 1px solid var(--bg-blue);
+    }                
+    .card input:focus {
+        outline: 1px solid var(--bg-blue);
+    }                
+    .card input:focus-visible {
+        border: 1px solid var(--bg-blue);
+    }
+    
+}
+
